@@ -1,0 +1,5 @@
+kai 3ge CMD:
+
+mongod --dbpath c:\database
+node app.js
+webpack
