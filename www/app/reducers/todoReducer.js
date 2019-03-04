@@ -1,4 +1,11 @@
- export default(state={'todos':[]},action)=>{
+ export default(state={
+     'todos':[],
+     'showtype':'show-all'
+    //show-all
+     //only-done;
+     //only-undone;
+    },action)=>{
+
   if(action.type=='INIT'){
      return{
      ...state,
@@ -39,8 +46,21 @@
           })
       }
     }
-  
-  
+    else if(action.type=='cst'){
+        return {
+            ...state,
+            'showtype':action.showtype
+        }
+    }
+    
+    else if(action.type=='sorttitle'){
+        return {
+            ...state,
+            'todos':state.todos.sort((a,b)=>{
+                return a.title-b.title
+            })
+        }
+    }
   
     return state
 }
