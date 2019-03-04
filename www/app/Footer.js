@@ -5,7 +5,7 @@ import * as todoActions from "./actions/todoActions.js";
 import {bindActionCreators} from "redux";
 class Footer extends Component {
    
-   //123
+   
     render() {
         return (
             <div>
